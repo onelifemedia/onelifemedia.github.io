@@ -1,0 +1,50 @@
+---
+layout: page
+breadcrumbs: Blog
+is_blog: true
+---
+<div id="blog" class="row">
+
+    <div class="prev-article row">
+
+        <div class="blog-prev-date col-md-3 col-sm-3">
+            <span class="date">
+                {{ page.date | date: "%-d" }} <small>{{ page.date | date: "%b %Y" }}</small>
+            </span>
+            <span class="info hidden-xs">
+                {% if page.author %} 
+                    <span class="block"><i class="fa fa-user"></i> BY {{ page.author }}</span>
+                {% endif %}
+                <span class="block"><i class="fa fa-link"></i> <a href="{{ page.url }}">PERMALINK</a></span>
+            </span>
+        </div>
+
+        <div class="col-md-9 col-sm-9">
+
+            <h1>{{ page.title }}</h1>
+
+
+            <!-- article content -->
+            <article>
+                {{ content }}
+            </article>
+
+
+            <!-- SOCIAL -->
+            <p class="socials">
+                <a href="#" class="rounded-icon social fa fa-facebook"><!-- facebook --></a>
+                <a href="#" class="rounded-icon social fa fa-twitter"><!-- twitter --></a>
+                <a href="#" class="rounded-icon social fa fa-google-plus"><!-- google plus --></a>
+                <a href="#" class="rounded-icon social fa fa-pinterest"><!-- pinterest --></a>
+                <a href="#" class="rounded-icon social fa fa-linkedin"><!-- linkedin --></a>
+            </p>
+
+            <hr class="half-margins invisible" />
+
+
+        </div>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<!-- PAGE TOP -->
+<section class="page-title">
+    <div class="container">
+
+        <header>
+
+            {% assign b = " " %}
+            {% capture b %}{{site.base_dir}}{% endcapture %}
+            <ul class="breadcrumb"><!-- breadcrumb -->
+                <li><a href="{{ site.base_dir }}/">Home</a></li>
+
+                {% for p in page.breadcrumbs %}
+                    <li><a href="{{ b }}/{{ p | downcase }}/">{{ p }}</a></li>
+                    {% capture b %}{{ b }}/{{p | downcase }}{% endcapture %}
+                {%endfor%}
+
+            </ul><!-- /breadcrumb -->
+
+            {% if page.is_blog != true %}
+            <h2><!-- Page Title -->
+                <strong>{{ page.title }}</strong>
+            </h2><!-- /Page Title -->
+            {% endif %}
+
+        </header>
+
+    </div>          
+</section>
+
+<section>
+    <div class="container">
+        {{ content }}
+    </div>
+</section>
