@@ -9,7 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://onelifemedia.com" # the base hostname & protocol for your site
 twitter_username: onelifemedia
 github_username:  onelifemedia
-gs_id: UA-55025316-1
+ga_id: UA-55025316-1
 
 # Build settings
 markdown: kramdown
